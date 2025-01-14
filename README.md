@@ -52,8 +52,19 @@ This project is a Spring Boot application that demonstrates JWT (JSON Web Token)
 Update your `application.properties` or `application.yml` file with the following properties:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/your-database-name
-spring.datasource.username=your-username
-spring.datasource.password=your-password
-jwt.secret=your-secret-key
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your-db
+    username: db-username
+    password: db-password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
