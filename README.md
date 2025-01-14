@@ -67,4 +67,37 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+```
+
+## Usage
+
+Register a new user: Send a POST request to /api/auth/register with a JSON payload containing username, password, and role.
+
+Login: Send a POST request to /api/auth/login with a JSON payload containing username and password. The response will include a JWT token.
+
+Access secure endpoints: Include the JWT token in the Authorization header as a Bearer token to access secure endpoints.
+
+## Endpoints
+
+POST /api/auth/register: Register a new user
+
+POST /api/auth/login: Login and obtain a JWT token
+
+GET /api/secure-endpoint: Access this endpoint by including the JWT token in the Authorization header
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request with your changes.
+
+## License
+Distributed under the MIT License. See LICENSE for more information
+
+```License
+
+Feel free to customize the content to match your specific project details! Is there anything specific you would like to add or modify?
+
+```
+
+
+
+
 
